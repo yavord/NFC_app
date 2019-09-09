@@ -3,7 +3,7 @@ import 'package:nfc_scanner/bloc/bloc.dart';
 import 'package:nfc_scanner/data_layer/nfc.dart';
 
 
-class NFCBloc extends Bloc {
+class NfcBloc extends Bloc {
   Nfc _nfc;
   Nfc get nfcScan => _nfc;
 

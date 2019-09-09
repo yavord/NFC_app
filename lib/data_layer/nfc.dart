@@ -1,5 +1,3 @@
-class Nfc {
-  final String tag;
+import 'package:flutter_nfc_reader/flutter_nfc_reader.dart';
 
-  Nfc.fromString(Map string) : tag = string['nfc_tag'];
-}
+class Nfc extends NfcData {}

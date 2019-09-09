@@ -15,6 +15,7 @@ class NFCReaderScreen extends StatelessWidget {
             ButtonBar(
               children: <Widget>[
                 RaisedButton(
+                  onPressed: null,
                   child: Text(''),
                 )
               ],
