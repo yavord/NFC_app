@@ -25,7 +25,6 @@ class NFCReaderScreen extends StatelessWidget {
                 child: Text('Back'),
                 onPressed: (){
                   Navigator.pop(context);
-                  //TODO: Navigate back to home page
                 },
               )
             ],

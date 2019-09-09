@@ -5,17 +5,6 @@ import 'package:flutter_nfc_reader/flutter_nfc_reader.dart';
 
 
 class NfcBloc extends FlutterNfcReader with Bloc {
-//  Nfc _nfc;
-//  Nfc get nfcScan => _nfc;
-//
-//  final _nfcController = StreamController<Nfc>();
-//
-//  Stream<Nfc> get nfcStream => _nfcController.stream;
-//
-//  void scanNfc(Nfc nfc) {
-//    _nfc = nfc;
-//    _nfcController.sink.add(nfc);
-//  }
 
   final _controller = StreamController<Nfc>();
   final _service = FlutterNfcReader.read();
