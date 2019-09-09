@@ -1,23 +1,33 @@
 import 'dart:async';
 import 'package:nfc_scanner/bloc/bloc.dart';
 import 'package:nfc_scanner/data_layer/nfc.dart';
+import 'package:flutter_nfc_reader/flutter_nfc_reader.dart';
 
 
-class NfcBloc extends Bloc {
-  Nfc _nfc;
-  Nfc get nfcScan => _nfc;
+class NfcBloc extends FlutterNfcReader with Bloc {
+//  Nfc _nfc;
+//  Nfc get nfcScan => _nfc;
+//
+//  final _nfcController = StreamController<Nfc>();
+//
+//  Stream<Nfc> get nfcStream => _nfcController.stream;
+//
+//  void scanNfc(Nfc nfc) {
+//    _nfc = nfc;
+//    _nfcController.sink.add(nfc);
+//  }
 
-  final _nfcController = StreamController<Nfc>();
+  final _controller = StreamController<Nfc>();
+  final _service = FlutterNfcReader.read();
+  Stream<Nfc> get nfcStream => _controller.stream;
 
-  Stream<Nfc> get nfcStream => _nfcController.stream;
-
-  void scanNfc(Nfc nfc) {
-    _nfc = nfc;
-    _nfcController.sink.add(nfc);
+  void getScan() async {
+    final results = await _service;
+    _controller.sink.add(results);
   }
 
   @override
   void dispose() {
-    _nfcController.close();
+    _controller.close();
   }
 }
