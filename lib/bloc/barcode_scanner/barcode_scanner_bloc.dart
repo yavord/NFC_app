@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:nfc_scanner/bloc/bloc.dart';
-import 'package:nfc_scanner/data_layer/barcode_scanner.dart';
+import 'package:nfc_scanner/models/barcode_scanner.dart';
 import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
 
 
