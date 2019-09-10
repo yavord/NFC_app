@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nfc_scanner/bloc/nfc_bloc.dart';
+import 'package:nfc_scanner/bloc/nfc/nfc_bloc.dart';
 import 'package:nfc_scanner/bloc/bloc_provider.dart';
 
 class NFCReaderScreen extends StatelessWidget {

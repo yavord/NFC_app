@@ -20,3 +20,4 @@ class NfcBloc extends Bloc {
     _controller.close();
   }
 }
+
