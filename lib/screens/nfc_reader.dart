@@ -18,7 +18,7 @@ class NFCReaderScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               RaisedButton(
-                onPressed: () => bloc.getScan(),
+                onPressed: () => bloc.getNfcScan(),
                 child: Text('Read NFC tag'),
               ),
               RaisedButton(

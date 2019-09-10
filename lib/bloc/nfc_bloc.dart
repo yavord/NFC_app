@@ -10,7 +10,7 @@ class NfcBloc extends Bloc {
   final _service = FlutterNfcReader.read();
   Stream<Nfc> get nfcStream => _controller.stream;
 
-  void getScan() async {
+  void getNfcScan() async {
     final results = await _service;
     _controller.sink.add(results);
   }

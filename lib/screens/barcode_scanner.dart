@@ -3,6 +3,8 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
+import 'package:nfc_scanner/bloc/barcode_scanner_bloc.dart';
+import 'package:nfc_scanner/bloc/bloc_provider.dart';
 
 
 
@@ -47,6 +49,8 @@ class _BarcodeScannerState extends State<BarcodeScanner> {
 
   @override
   Widget build(BuildContext context) {
+    final bloc = BarcodeScannerBloc();
+
     return Scaffold(
         appBar: AppBar(title: const Text('Barcode scan')),
         body: Builder(builder: (BuildContext context) {
@@ -56,11 +60,12 @@ class _BarcodeScannerState extends State<BarcodeScanner> {
                   direction: Axis.vertical,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    RaisedButton(
-                        onPressed: () {
-                          initPlatformState();
-                        },
-                        child: Text("Start barcode scan")),
+                    BlocProvider<BarcodeScannerBloc>(
+                      bloc: bloc,
+                      child: RaisedButton(
+                          onPressed: () => bloc.getBarcodeScan(),
+                          child: Text("Start barcode scan")),
+                    ),
                     Text('Scan result : $_scanBarcode\n',
                         style: TextStyle(fontSize: 20)),
                     RaisedButton(
