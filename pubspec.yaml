@@ -23,7 +23,7 @@ dependencies:
   cupertino_icons: ^0.1.2
   flutter_barcode_scanner: ^0.1.5+1
   equatable: ^0.5.1
-  bloc: ^0.15.0
+  flutter_bloc: ^0.21.0
 
   flutter_nfc_reader:
     git:

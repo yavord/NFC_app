@@ -26,6 +26,7 @@ class _BarcodeScannerState extends State<BarcodeScanner> {
                             child: Text("Start barcode scan")),
                         StreamBuilder(
                           stream: _bloc.barcodeScan,
+                          initialData: 'no scan available.',
                           builder: (BuildContext context, AsyncSnapshot<String> snapshot) {
                             return Text('Scan result : ${snapshot.data}\n',
                                 style: TextStyle(fontSize: 20));
