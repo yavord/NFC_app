@@ -1,16 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:nfc_scanner/widgets/nfc_reader.dart';
-import 'package:nfc_scanner/widgets/barcode_scanner.dart';
-import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
-
-//class MyHomePage extends StatefulWidget {
-//  MyHomePage({Key key, this.title}) : super(key: key);
-//
-//  final String title;
-//
-//  @override
-//  _MyHomePageState createState() => _MyHomePageState();
-//}
 
 class MyHomePage extends StatelessWidget {
   @override
