@@ -11,7 +11,7 @@ class BarcodeScanBloc extends Bloc<BarcodeScanEvent, BarcodeScanState>{
 
   @override
   Stream<BarcodeScanState> mapEventToState(BarcodeScanEvent event) async* {
-    if(event is getBarcodeScan) {
+    if(event is GetBarcodeScan) {
       yield BarcodeLoading();
       final barcode = await _getBarcode();
       yield BarcodeLoaded(barcode);

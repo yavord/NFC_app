@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:nfc_scanner/screens/home.dart';
 import 'package:nfc_scanner/screens/nfc_reader.dart';
-import 'package:nfc_scanner/screens/barcode_scanner.dart';
+//import 'package:nfc_scanner/screens/barcode_scanner.dart';
+import 'package:nfc_scanner/screens/barcode_scanner_test.dart';
 
 void main() => runApp(MyApp());
 
