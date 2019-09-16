@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nfc_scanner/bloc/barcode_scanner/barcode_scanner.dart';
-import 'package:nfc_scanner/bloc/bloc_provider.dart';
 import 'package:nfc_scanner/models/barcode_scanner.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 
 class BarcodeScanWidget extends StatefulWidget {
@@ -21,7 +21,7 @@ class _BarcodeScanWidgetState extends State<BarcodeScanWidget> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         RaisedButton(
-          onPressed: () => ,
+          onPressed: submitScannerRequest,
         )
       ],
     );
